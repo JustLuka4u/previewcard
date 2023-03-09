@@ -1,0 +1,119 @@
+html{
+  box-sizing: border-box;
+}
+body {
+  margin:0;
+  padding: 0;
+}
+
+p {
+ font-size: 14px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight:500;
+ color: hsl(228, 12%, 48%);
+}
+
+.title{
+  font-size: 12px;
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 3px;
+}
+h1{
+  font-weight: 700;
+  font-size:2.2rem;
+  font-family: 'Fraunces', serif;
+  Display:flex;
+  justify-content:center;
+  align-items:center;
+  color: hsl(212, 21%, 14%);
+}
+
+.price-container{
+  Display:flex;
+  gap:16px;
+  align-items:center;
+}
+
+.price{
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+.old-price{
+  font-size: 14px;
+  text-decoration: line-through;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+
+.details {
+  padding: 20px 30px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 580px;
+  max-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image{
+  background-image: url('./images/image-product-desktop.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.submit{
+  background-color: hsl(158, 36%, 37%);
+  color:hsl(0, 0%, 100%);
+  border: 1px solid green;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-block: 10px;
+  outline: none;
+  border: none;
+  font-weight: 700;
+}
+
+.container {
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 375px){
+  .image{
+    background-image:url("./images/image-product-mobile.jpg");
+    flex-direction: column;
+    width:100%;
+    min-height:210px;
+    background-size: contain;
+    max-height: 480px;
+    background-repeat: no-repeat;
+
+  }
+
+  .grid{
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    max-width: 80%;
+    margin: 0 auto;
+   }
+}
